@@ -1,3 +1,4 @@
+# This project is a way to create shorthand aliases for Docker in Windows or Linux
 # Setup for Windows
 1. Run the following command `notepad.exe $PROFILE`
 2. Paste the content from profile-scripts.ps1 in the $PROFILE file
