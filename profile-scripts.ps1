@@ -1,20 +1,38 @@
+# rmi => pass any keyword for a container and this will remove all images which match the input
 Set-Alias rmi docker_rmi
+# logs => pass any keyword from a container and this will tail the log stream from that container (CTRL + C to exits)
 Set-Alias logs docker_logs
+# grab => pass any keyword from a container and this will return the container id based on the input string
 Set-Alias grab grab_container
+# igrab => pass any keyword from an image and this will return the image id based on the input string
 Set-Alias igrab grab_image
+# dup => pass the docker compose file name and this will rebuild(if build is specified) and deploy all services in that compose file 
 Set-Alias dup compose_up
+# ddown => pass the docker compose file name and this will
 Set-Alias ddown compose_down
+# dex => pass any keyword from a container and this will execute a bash script inside of a container
 Set-Alias dex docker_exec
+# dexs => pass any keyword from a container and this will execute a shell script inside of a container 
 Set-Alias dexs docker_execs
+# dgo => pass two arguments, the first is the docker compose name and the second is any keyword for the desired container and this will deploy a compose file and execute a bash script inside of the container
 Set-Alias dgo docker_go
+# drun => pass any keyword from an image and this will deploy an image with the entrypoint being a bash script 
 Set-Alias drun run_container
+# druns => pass any keyword from an image and this will deploy an image with the entrypoint being a shell script
 Set-Alias druns run_containers
+# ds => run ds to list all running containers on the current docker daemon
 Set-Alias ds docker_ps
+# dk => pass any keyword from a container and this will kill the running container
 Set-Alias dk docker_kill
+# di => run di to list all images on the current docker daemon
 Set-Alias di docker_images
+# dcp => docker container prune shorthand
 Set-Alias dcp docker_container_prune
+# dip => docker image prune shorthand
 Set-Alias dip docker_image_prune
+# dvp => docker image prune shorthand
 Set-Alias dvp docker_volume_prune
+# dprune => shorthand to purge all hanging resources in docker
 Set-Alias dprune docker_prune
 
 function docker_prune {
