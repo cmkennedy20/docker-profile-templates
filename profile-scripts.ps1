@@ -1,3 +1,5 @@
+# env lists environment variables
+Set-Alias -Name env -Value Get-Env
 # rmi => pass any keyword for a container and this will remove all images which match the input
 Set-Alias rmi docker_rmi
 # logs => pass any keyword from a container and this will tail the log stream from that container (CTRL + C to exits)
