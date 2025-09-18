@@ -116,3 +116,7 @@ function docker_go {
     compose_up $args[0]
     docker_exec $args[1]
 }
+
+Function Get-Env{
+  Get-ChildItem Env:
+}
